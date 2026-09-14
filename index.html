@@ -4,88 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apology for My Maalkin ❤️</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-            background-color: #ffe6eb;
-            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffdee9 0%, #b5fffc 100%);
+            font-family: 'Nunito', sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 20px 15px;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
         .container {
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 25px;
-            max-width: 450px;
-            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.25);
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 25px 20px;
+            max-width: 420px;
+            width: 100%;
+            box-shadow: 0 12px 30px rgba(255, 105, 180, 0.2);
             text-align: center;
-            border: 2px solid #ffb6c1;
+            border: 2px solid #ffffff;
+            position: relative;
+            overflow: hidden;
         }
         .header-title {
-            color: #d63384;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
+            color: #ff477e;
+            font-family: 'Fredoka', cursive;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        .sub-title {
+            color: #7209b7;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 15px;
         }
         
-        /* Dodo Writing Motion Graphics Container */
-        .dodo-writer-box {
-            position: relative;
-            display: inline-block;
-            margin: 10px 0;
-        }
-        .doodle-img {
-            width: 190px;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
-            animation: writingMotion 0.4s infinite alternate ease-in-out;
-        }
-
-        /* Pencil Motion Animation */
-        @keyframes writingMotion {
-            0% { transform: rotate(0deg) translateY(0px); }
-            50% { transform: rotate(-2deg) translateY(-3px); }
-            100% { transform: rotate(2deg) translateY(2px); }
+        /* Cute CSS Character Badge */
+        .character-badge {
+            background: #ffe6eb;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 45px;
+            margin: 0 auto 10px auto;
+            border: 3px solid #ff477e;
+            box-shadow: 0 6px 15px rgba(255, 71, 126, 0.2);
+            animation: bounce 2s infinite ease-in-out;
         }
 
-        .handwritten-sorry-container {
-            position: relative;
-            background: #fff0f5;
-            border-radius: 12px;
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* Clean 100 Sorry Box */
+        .sorry-box-container {
+            background: #fff5f8;
+            border-radius: 16px;
             padding: 12px;
-            height: 110px;
+            height: 120px;
             overflow-y: auto;
-            border: 2px dashed #ff69b4;
+            border: 2px dashed #ff85a1;
             margin-bottom: 20px;
             text-align: left;
+            box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
         }
 
-        .handwritten-sorry {
-            font-family: 'Caveat', cursive;
-            font-size: 1.8rem;
-            color: #e63946;
-            line-height: 1.4;
-            display: inline;
-        }
-
-        /* Animated Pencil Pen Cursor */
-        .pencil-cursor {
-            display: inline-block;
-            font-size: 1.6rem;
-            animation: penDraw 0.2s infinite alternate;
-            vertical-align: middle;
-            margin-left: 2px;
-        }
-
-        @keyframes penDraw {
-            0% { transform: translate(0, 0) rotate(0deg); }
-            100% { transform: translate(2px, -4px) rotate(-15deg); }
+        .sorry-text {
+            font-family: 'Fredoka', cursive;
+            font-size: 1.05rem;
+            color: #ff2e63;
+            line-height: 1.6;
         }
 
         .note-text {
@@ -94,28 +93,35 @@
             text-align: left;
             line-height: 1.6;
             margin-bottom: 20px;
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 14px;
+            border: 1px solid #ffe3ec;
         }
+
         .btn-approve {
-            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            background: linear-gradient(135deg, #ff477e, #ff0054);
             color: white;
             border: none;
-            padding: 14px 28px;
-            font-size: 1rem;
-            font-weight: 600;
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            font-family: 'Fredoka', cursive;
             border-radius: 30px;
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
+            box-shadow: 0 8px 20px rgba(255, 0, 84, 0.35);
             transition: all 0.3s ease;
             width: 100%;
         }
+
         .btn-approve:active {
-            transform: scale(0.95);
+            transform: scale(0.96);
         }
+
         .sign-off {
             margin-top: 15px;
-            font-weight: 600;
-            color: #d63384;
-            font-size: 0.9rem;
+            font-weight: 700;
+            color: #ff477e;
+            font-size: 0.88rem;
         }
     </style>
 </head>
@@ -124,22 +130,19 @@
 <div class="container">
     <div class="header-title">🏛️ DEPARTMENT OF HUBBY AFFAIRS</div>
     
-    <!-- Motion Graphics Dodo Character -->
-    <div class="dodo-writer-box">
-        <img src="dodo.png" alt="Dodo Writing" class="doodle-img">
-    </div>
-    
-    <p style="font-weight: 600; color: #d63384; margin-top: 5px;">Dodo is writing 100 Sorrys with his own hands... ✍️🥺</p>
+    <!-- Animated Cute Character Badge -->
+    <div class="character-badge">🙇🏻‍♂️🥺</div>
 
-    <!-- Real-time Hand-writing Motion Box -->
-    <div class="handwritten-sorry-container" id="scrollBox">
-        <span class="handwritten-sorry" id="sorryBox"></span>
-        <span class="pencil-cursor" id="pencilCursor">✏️</span>
+    <div class="sub-title">Dodo is typing 100 Sorrys for Maalkin... ✍️❤️</div>
+
+    <!-- 100 Sorry Auto-Typing Box -->
+    <div class="sorry-box-container" id="scrollBox">
+        <span class="sorry-text" id="sorryText"></span>
     </div>
 
     <!-- Heartfelt Note -->
     <div class="note-text">
-        <p><b>Respected Maalkin,</b></p>
+        <p style="margin-top:0;"><b>Respected Maalkin,</b></p>
         <p>Mujhe nahi pata mere kis gesture ya baat se tum naraz ho, par meri uss ek chhoti si galti ke liye <b>I am deeply, truly sorry.</b></p>
         <p>Tum sach mein meri poori duniya ho. Agar tumhe lagta hai maine galti ki hai, toh <i>you can punish me however you want</i>—main sab karne ko taiyaar hoon! Bas aise baat band karke saza mat do na...</p>
     </div>
@@ -156,33 +159,31 @@
 </div>
 
 <script>
-    // Real-time Motion Graphics Typing Simulation
-    const sorryText = "Sorry ❤️ " .repeat(100);
+    // Smooth 100 Sorry Typewriter
+    const sorryArray = [];
+    for(let i = 1; i <= 100; i++) {
+        sorryArray.push(`Sorry ${i} ❤️ `);
+    }
+    
     let index = 0;
-    const speed = 45; 
-    const box = document.getElementById("sorryBox");
+    const sorryTextElem = document.getElementById("sorryText");
     const scrollBox = document.getElementById("scrollBox");
-    const cursor = document.getElementById("pencilCursor");
 
-    function typeSorry() {
-        if (index < sorryText.length) {
-            box.innerHTML += sorryText.charAt(index);
+    function typeNextSorry() {
+        if (index < sorryArray.length) {
+            sorryTextElem.innerHTML += sorryArray[index];
             index++;
             scrollBox.scrollTop = scrollBox.scrollHeight;
-            setTimeout(typeSorry, speed);
-        } else {
-            // Pencil stops moving when done writing
-            cursor.style.display = 'none';
+            setTimeout(typeNextSorry, 40);
         }
     }
     
-    // Start writing motion
-    setTimeout(typeSorry, 500);
+    setTimeout(typeNextSorry, 400);
 
     function forgiveDodo() {
         alert("Yay! Thank you Maalkin! ❤️ Apni punishment aur sweet reply WhatsApp par bhejo!");
         
-        // Exact WhatsApp text preserved 100%!
+        // Exact WhatsApp text 100% unchanged!
         var text = encodeURIComponent("Maine apne Dodo ko maaf kiya! ❤️ Meri taraf se tumhari punishment ye hai: ");
         var phoneNumber = "917068634975"; // Apna 10-digit number yahan daalna!
 
