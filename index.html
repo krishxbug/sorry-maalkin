@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apology for My Maalkin ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #ffe6eb;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 20px;
             display: flex;
@@ -20,42 +21,48 @@
             border-radius: 20px;
             padding: 25px;
             max-width: 450px;
-            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.25);
             text-align: center;
             border: 2px solid #ffb6c1;
         }
         .header-title {
             color: #d63384;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
         }
-        .character-box {
-            font-size: 70px;
-            margin: 15px 0;
-            animation: pulse 1.5s infinite alternate;
+        .doodle-img {
+            width: 180px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+            margin: 10px 0;
+            animation: float 2s infinite alternate ease-in-out;
         }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.1); }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-8px); }
         }
-        .sorry-grid {
-            height: 120px;
-            overflow-y: auto;
+        .handwritten-sorry {
+            font-family: 'Caveat', cursive;
+            font-size: 1.8rem;
+            color: #e63946;
             background: #fff0f5;
             border-radius: 12px;
-            padding: 10px;
-            font-size: 0.85rem;
-            color: #e63946;
+            padding: 12px;
+            height: 110px;
+            overflow-y: auto;
+            border: 2px dashed #ff69b4;
             margin-bottom: 20px;
-            border: 1px dashed #ff69b4;
-            line-height: 1.6;
+            line-height: 1.4;
+            text-align: left;
         }
         .note-text {
             color: #4a4a4a;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             text-align: left;
-            line-height: 1.5;
+            line-height: 1.6;
             margin-bottom: 20px;
         }
         .btn-approve {
@@ -64,7 +71,7 @@
             border: none;
             padding: 14px 28px;
             font-size: 1rem;
-            font-weight: bold;
+            font-weight: 600;
             border-radius: 30px;
             cursor: pointer;
             box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
@@ -76,7 +83,7 @@
         }
         .sign-off {
             margin-top: 15px;
-            font-weight: bold;
+            font-weight: 600;
             color: #d63384;
             font-size: 0.9rem;
         }
@@ -87,24 +94,13 @@
 <div class="container">
     <div class="header-title">🏛️ DEPARTMENT OF HUBBY AFFAIRS</div>
     
-    <!-- Animated Character -->
-    <div class="character-box">🙇🏻‍♂️🥺❤️</div>
+    <!-- Cute Custom Dodo Doodle Image -->
+    <img src="dodo.png" alt="Dodo Writing Sorry" class="doodle-img">
     
-    <p style="font-weight: bold; color: #d63384; margin-top: 0;">100 Times Sorry & Dono Kaan Pakad Ke Maafi 👂🏻</p>
+    <p style="font-weight: 600; color: #d63384; margin-top: 5px;">Dodo is writing 100 Sorrys for Maalkin... ✍️🥺</p>
 
-    <!-- 100 Sorry Box -->
-    <div class="sorry-grid">
-        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
-        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
-        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
-        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
-        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
-        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
-        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
-        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
-        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
-        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry
-    </div>
+    <!-- Animated Cute Handwritten Sorry Box -->
+    <div class="handwritten-sorry" id="sorryBox"></div>
 
     <!-- Heartfelt Note -->
     <div class="note-text">
@@ -125,13 +121,28 @@
 </div>
 
 <script>
+    // Handwritten typing animation for 100 Sorrys
+    const sorryText = "Sorry ❤️ " .repeat(100);
+    let index = 0;
+    const speed = 35;
+    const box = document.getElementById("sorryBox");
+
+    function typeSorry() {
+        if (index < sorryText.length) {
+            box.innerHTML += sorryText.charAt(index);
+            index++;
+            box.scrollTop = box.scrollHeight;
+            setTimeout(typeSorry, speed);
+        }
+    }
+    typeSorry();
+
     function forgiveDodo() {
         alert("Yay! Thank you Maalkin! ❤️ Apni punishment aur sweet reply WhatsApp par bhejo!");
         
+        // Exact WhatsApp message as required!
         var text = encodeURIComponent("Maine apne Dodo ko maaf kiya! ❤️ Meri taraf se tumhari punishment ye hai: ");
-        
-        // 👇 YAHAN APNA NUMBER CHANGE KARO (Jaise: 919876543210) 👇
-        var phoneNumber = "917068634975"; 
+        var phoneNumber = "917068634975"; // Put your 10-digit WhatsApp number here!
 
         window.location.href = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + text;
     }
