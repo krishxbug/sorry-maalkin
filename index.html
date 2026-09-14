@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Dearest Maalkin ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Great+Vibes&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%);
+            font-family: 'Poppins', sans-serif;
+            padding: 20px 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .romantic-card {
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 24px;
+            padding: 30px 22px;
+            max-width: 410px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(225, 112, 85, 0.25);
+            text-align: center;
+            border: 2px solid #ffffff;
+        }
+
+        .header-tag {
+            color: #d63031;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            opacity: 0.85;
+        }
+
+        .romantic-heading {
+            color: #d63031;
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.7rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+
+        /* Romantic Highlight Box */
+        .apology-badge-box {
+            background: #fff5f6;
+            border-radius: 16px;
+            padding: 14px 12px;
+            border: 1.5px dashed #ff85a1;
+            margin-bottom: 22px;
+            text-align: center;
+        }
+
+        .apology-badge-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.65rem;
+            color: #e84393;
+            line-height: 1.4;
+            display: block;
+        }
+
+        /* Heartfelt Note Body */
+        .letter-body {
+            color: #2d3436;
+            font-size: 0.94rem;
+            text-align: left;
+            line-height: 1.85;
+            margin-bottom: 24px;
+            background: #ffffff;
+            padding: 20px 18px;
+            border-radius: 18px;
+            border: 1px solid #ffeaa7;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .letter-body p {
+            margin-bottom: 12px;
+        }
+
+        .btn-forgive-main {
+            background: linear-gradient(135deg, #ff7675, #d63031);
+            color: white;
+            border: none;
+            padding: 16px 20px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 8px 22px rgba(214, 48, 49, 0.35);
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-forgive-main:active {
+            transform: scale(0.96);
+        }
+
+        .signature {
+            margin-top: 20px;
+            font-weight: 600;
+            color: #d63031;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="romantic-card">
+    <div class="header-tag">A Letter From My Heart</div>
+    
+    <div class="romantic-heading">I'm So Sorry, My Love ❤️</div>
+
+    <!-- Soft Single Line Apology Badge -->
+    <div class="apology-badge-box">
+        <span class="apology-badge-text">I am deeply sorry, my love ❤️<br>I love you endlessly, Maalkin... 🥺</span>
+    </div>
+
+    <!-- Deeply Romantic & Intimate Note -->
+    <div class="letter-body">
+        <p style="margin-top:0;"><b>My Dearest Maalkin,</b></p>
+        <p>Mujhe nahi pata meri kis nadani ya baat ne tumhare itne pyare se dil ko dukhaya hai, par sach me, <b>I am deeply, truly sorry...</b></p>
+        <p>Jab tum naraz hoti ho na, toh aisa lagta hai jaise aas-paas ka saara sukoon chheen gaya ho. Tumhari saanson ki garmaahat, tumhara wo dhere se muskurana, aur mera haath pakad kar tumhara wo bina bole sab keh dena—mai har ek pal bas wahi feel missing kar raha hoon.</p>
+        <p>Tum sirf meri zindagi nahi ho, tum mera saara sukoon ho. Meri aakhri dhadkan aur har ek khwab bas tumse shuru hota hai. Agar maine galti ki hai, toh mujhe jo saza deni hai do, mera har haq tumhara hai... bas iss tarah mujhse apna pyaar aur saaya mat chheeno na...</p>
+    </div>
+
+    <!-- WhatsApp Forgive Button -->
+    <button class="btn-forgive-main" onclick="forgiveDodo()">
+        💖 Maaf Kiya! (Click Here) 💖
+    </button>
+
+    <div class="signature">
+        Yours & Only Yours... forever in your custody,<br>
+        <b>Your Dodo ❤️</b>
+    </div>
+</div>
+
+<script>
+    function forgiveDodo() {
+        alert("Yay! Thank you Maalkin! ❤️ Apni punishment aur sweet reply WhatsApp par bhejo!");
+        
+        var text = encodeURIComponent("Maine apne Dodo ko maaf kiya! ❤️ Meri taraf se tumhari punishment ye hai: ");
+        var phoneNumber = "917068634975"; // Yahan apna 10-digit WhatsApp number daalna!
+
+        window.location.href = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + text;
+    }
+</script>
+
+</body>
+</html>
