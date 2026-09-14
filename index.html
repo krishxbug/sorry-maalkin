@@ -3,189 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apology for My Maalkin ❤️</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>For My Maalkin ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
         body {
-            background: linear-gradient(135deg, #ffdee9 0%, #b5fffc 100%);
-            font-family: 'Nunito', sans-serif;
-            margin: 0;
-            padding: 20px 15px;
+            background: linear-gradient(135deg, #ffc3a0 0%, #ffafbd 100%);
+            font-family: 'Quicksand', sans-serif;
+            padding: 25px 15px;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
-        .container {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 24px;
-            padding: 25px 20px;
+        .letter-card {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-radius: 28px;
+            padding: 30px 22px;
             max-width: 420px;
             width: 100%;
-            box-shadow: 0 12px 30px rgba(255, 105, 180, 0.2);
+            box-shadow: 0 15px 35px rgba(225, 112, 85, 0.25);
             text-align: center;
             border: 2px solid #ffffff;
-            position: relative;
-            overflow: hidden;
         }
-        .header-title {
-            color: #ff477e;
-            font-family: 'Fredoka', cursive;
-            font-size: 1.15rem;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-        .sub-title {
-            color: #7209b7;
-            font-size: 0.88rem;
+        .header-tag {
+            color: #d63031;
+            font-size: 0.82rem;
             font-weight: 700;
-            margin-bottom: 15px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+        .main-title {
+            color: #d63031;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 18px;
         }
         
-        /* Cute Animated Character Badge */
-        .character-badge {
-            background: #ffe6eb;
-            width: 85px;
-            height: 85px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 42px;
-            margin: 0 auto 10px auto;
-            border: 3px solid #ff477e;
-            box-shadow: 0 6px 15px rgba(255, 71, 126, 0.2);
-            animation: bounce 2s infinite ease-in-out;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-
-        /* Clean Numbered 100 Sorry Box */
-        .sorry-box-container {
-            background: #fff5f8;
-            border-radius: 16px;
-            padding: 12px;
-            height: 120px;
-            overflow-y: auto;
-            border: 2px dashed #ff85a1;
-            margin-bottom: 20px;
-            text-align: left;
-            box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
-        }
-
-        .sorry-text {
-            font-family: 'Fredoka', cursive;
-            font-size: 1.05rem;
-            color: #ff2e63;
-            line-height: 1.6;
-        }
-
-        .note-text {
-            color: #4a4a4a;
-            font-size: 0.92rem;
-            text-align: left;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            background: #ffffff;
+        /* Romantic Heart Stream Box */
+        .sorry-stream-box {
+            background: #fff5f6;
+            border-radius: 18px;
             padding: 15px;
-            border-radius: 14px;
-            border: 1px solid #ffe3ec;
+            height: 110px;
+            overflow-y: auto;
+            border: 1.5px solid #ffb8c6;
+            margin-bottom: 22px;
+            text-align: center;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.03);
         }
 
-        .btn-approve {
-            background: linear-gradient(135deg, #ff477e, #ff0054);
+        .sorry-stream-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.45rem;
+            color: #e84393;
+            line-height: 1.6;
+            word-spacing: 2px;
+        }
+
+        .note-body {
+            color: #2d3436;
+            font-size: 0.94rem;
+            text-align: left;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 18px;
+            border: 1px solid #ffeaa7;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .btn-forgive {
+            background: linear-gradient(135deg, #ff7675, #d63031);
             color: white;
             border: none;
-            padding: 15px 20px;
+            padding: 16px 24px;
             font-size: 1.05rem;
-            font-family: 'Fredoka', cursive;
+            font-weight: 700;
             border-radius: 30px;
             cursor: pointer;
-            box-shadow: 0 8px 20px rgba(255, 0, 84, 0.35);
+            box-shadow: 0 8px 22px rgba(214, 48, 49, 0.35);
             transition: all 0.3s ease;
             width: 100%;
+            letter-spacing: 0.5px;
         }
 
-        .btn-approve:active {
+        .btn-forgive:active {
             transform: scale(0.96);
         }
 
         .sign-off {
-            margin-top: 15px;
+            margin-top: 18px;
             font-weight: 700;
-            color: #ff477e;
-            font-size: 0.88rem;
+            color: #d63031;
+            font-size: 0.9rem;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="header-title">🏛️ DEPARTMENT OF HUBBY AFFAIRS</div>
+<div class="letter-card">
+    <div class="header-tag">DEPARTMENT OF HUBBY AFFAIRS</div>
     
-    <!-- Animated Cute Character Badge -->
-    <div class="character-badge">🙇🏻‍♂️🥺</div>
+    <div class="main-title">For My Everything, My Maalkin ❤️</div>
 
-    <div class="sub-title">Dodo is typing 100 Sorrys for Maalkin... ✍️❤️</div>
-
-    <!-- 100 Sorry Auto-Typing Box -->
-    <div class="sorry-box-container" id="scrollBox">
-        <span class="sorry-text" id="sorryText"></span>
+    <!-- Pure Romantic Sorry Flow Box -->
+    <div class="sorry-stream-box" id="scrollContainer">
+        <span class="sorry-stream-text" id="streamText"></span>
     </div>
 
     <!-- Heartfelt Note -->
-    <div class="note-text">
+    <div class="note-body">
         <p style="margin-top:0;"><b>Respected Maalkin,</b></p>
         <p>Mujhe nahi pata mere kis gesture ya baat se tum naraz ho, par meri uss ek chhoti si galti ke liye <b>I am deeply, truly sorry.</b></p>
         <p>Tum sach mein meri poori duniya ho. Agar tumhe lagta hai maine galti ki hai, toh <i>you can punish me however you want</i>—main sab karne ko taiyaar hoon! Bas aise baat band karke saza mat do na...</p>
     </div>
 
     <!-- Interactive Approval Button -->
-    <button class="btn-approve" onclick="forgiveDodo()">
+    <button class="btn-forgive" onclick="forgiveDodo()">
         💖 Maaf Kiya! (Click Here) 💖
     </button>
 
     <div class="sign-off">
         Yours & Only Yours... forever in your custody,<br>
-        <b>Your Dodo 🙇🏻‍♂️❤️</b>
+        <b>Your Dodo ❤️</b>
     </div>
 </div>
 
 <script>
-    // Smooth Numbered 100 Sorry Typewriter
-    const sorryArray = [];
-    for(let i = 1; i <= 100; i++) {
-        sorryArray.push(`Sorry ${i} ❤️ `);
-    }
+    // Pure Romantic Repeated Sorry Flow (No numbers, no weird emojis)
+    const romanticSorryText = "I am so sorry my love ❤️ • I'm deeply sorry • Please forgive me • I love you so much ❤️ • Sorry Maalkin • ";
+    const fullText = romanticSorryText.repeat(10);
     
-    let index = 0;
-    const sorryTextElem = document.getElementById("sorryText");
-    const scrollBox = document.getElementById("scrollBox");
+    let charIndex = 0;
+    const textElem = document.getElementById("streamText");
+    const container = document.getElementById("scrollContainer");
 
-    function typeNextSorry() {
-        if (index < sorryArray.length) {
-            sorryTextElem.innerHTML += sorryArray[index];
-            index++;
-            scrollBox.scrollTop = scrollBox.scrollHeight;
-            setTimeout(typeNextSorry, 35);
+    function flowText() {
+        if (charIndex < fullText.length) {
+            textElem.innerHTML += fullText.charAt(charIndex);
+            charIndex++;
+            container.scrollTop = container.scrollHeight;
+            setTimeout(flowText, 30);
         }
     }
     
-    setTimeout(typeNextSorry, 400);
+    setTimeout(flowText, 300);
 
     function forgiveDodo() {
         alert("Yay! Thank you Maalkin! ❤️ Apni punishment aur sweet reply WhatsApp par bhejo!");
         
-        // Exact WhatsApp text 100% unchanged!
+        // Exact WhatsApp text unchanged!
         var text = encodeURIComponent("Maine apne Dodo ko maaf kiya! ❤️ Meri taraf se tumhari punishment ye hai: ");
-        var phoneNumber = "917068634975"; // Yahan apna 10-digit number daalna!
+        var phoneNumber = "917068634975"; // Apna 10-digit number yahan daalna!
 
         window.location.href = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + text;
     }
