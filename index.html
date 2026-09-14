@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apology for My Maalkin ❤️</title>
+    <style>
+        body {
+            background-color: #ffe6eb;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 25px;
+            max-width: 450px;
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+            text-align: center;
+            border: 2px solid #ffb6c1;
+        }
+        .header-title {
+            color: #d63384;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .character-box {
+            font-size: 70px;
+            margin: 15px 0;
+            animation: pulse 1.5s infinite alternate;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+        .sorry-grid {
+            height: 120px;
+            overflow-y: auto;
+            background: #fff0f5;
+            border-radius: 12px;
+            padding: 10px;
+            font-size: 0.85rem;
+            color: #e63946;
+            margin-bottom: 20px;
+            border: 1px dashed #ff69b4;
+            line-height: 1.6;
+        }
+        .note-text {
+            color: #4a4a4a;
+            font-size: 0.95rem;
+            text-align: left;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .btn-approve {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        .btn-approve:active {
+            transform: scale(0.95);
+        }
+        .sign-off {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #d63384;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-title">🏛️ DEPARTMENT OF HUBBY AFFAIRS</div>
+    
+    <!-- Animated Character -->
+    <div class="character-box">🙇🏻‍♂️🥺❤️</div>
+    
+    <p style="font-weight: bold; color: #d63384; margin-top: 0;">100 Times Sorry & Dono Kaan Pakad Ke Maafi 👂🏻</p>
+
+    <!-- 100 Sorry Box -->
+    <div class="sorry-grid">
+        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
+        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
+        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
+        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
+        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
+        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
+        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
+        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
+        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry •
+        Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry • Sorry
+    </div>
+
+    <!-- Heartfelt Note -->
+    <div class="note-text">
+        <p><b>Respected Maalkin,</b></p>
+        <p>Mujhe nahi pata mere kis gesture ya baat se tum naraz ho, par meri uss ek chhoti si galti ke liye <b>I am deeply, truly sorry.</b></p>
+        <p>Tum sach mein meri poori duniya ho. Agar tumhe lagta hai maine galti ki hai, toh <i>you can punish me however you want</i>—main sab karne ko taiyaar hoon! Bas aise baat band karke saza mat do na...</p>
+    </div>
+
+    <!-- Interactive Approval Button -->
+    <button class="btn-approve" onclick="forgiveDodo()">
+        💖 Maaf Kiya! (Click Here) 💖
+    </button>
+
+    <div class="sign-off">
+        Yours & Only Yours... forever in your custody,<br>
+        <b>Your Dodo 🙇🏻‍♂️❤️</b>
+    </div>
+</div>
+
+<script>
+    function forgiveDodo() {
+        alert("Yay! Thank you Maalkin! ❤️ Apni punishment aur sweet reply WhatsApp par bhejo!");
+        
+        var text = encodeURIComponent("Maine apne Dodo ko maaf kiya! ❤️ Meri taraf se tumhari punishment ye hai: ");
+        
+        // 👇 YAHAN APNA NUMBER CHANGE KARO (Jaise: 919876543210) 👇
+        var phoneNumber = "917068634975"; 
+
+        window.location.href = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + text;
+    }
+</script>
+
+</body>
+</html>
