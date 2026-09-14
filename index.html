@@ -19,19 +19,6 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        /* Floating Hearts Animation Background */
-        .heart-bg {
-            position: fixed;
-            top: -10%;
-            left: 0;
-            width: 100%;
-            height: 120%;
-            pointer-events: none;
-            z-index: 0;
         }
 
         .card {
@@ -44,8 +31,6 @@
             box-shadow: 0 15px 35px rgba(225, 112, 85, 0.25);
             text-align: center;
             border: 2px solid #ffffff;
-            position: relative;
-            z-index: 1;
         }
 
         .badge-header {
@@ -71,38 +56,44 @@
             margin-bottom: 18px;
         }
 
-        /* Soft Romantic Sorry Box */
+        /* Romantic Sorry Box */
         .sorry-flow-box {
             background: #fff5f6;
             border-radius: 18px;
-            padding: 14px;
-            height: 110px;
-            overflow-y: auto;
+            padding: 16px 14px;
+            min-height: 90px;
             border: 1.5px dashed #ff85a1;
             margin-bottom: 20px;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
         }
 
         .sorry-flow-text {
             font-family: 'Caveat', cursive;
-            font-size: 1.55rem;
+            font-size: 1.6rem;
             color: #e84393;
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
-        /* Romantic Note */
+        /* Deeply Emotional & Intimate Note */
         .letter-content {
             color: #2d3436;
-            font-size: 0.92rem;
+            font-size: 0.93rem;
             text-align: left;
-            line-height: 1.7;
+            line-height: 1.8;
             margin-bottom: 22px;
             background: #ffffff;
-            padding: 18px;
+            padding: 20px 18px;
             border-radius: 18px;
             border: 1px solid #ffeaa7;
             box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .letter-content p {
+            margin-bottom: 12px;
         }
 
         .btn-forgive {
@@ -127,7 +118,7 @@
             margin-top: 18px;
             font-weight: 700;
             color: #d63031;
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             line-height: 1.5;
         }
     </style>
@@ -135,21 +126,21 @@
 <body>
 
 <div class="card">
-    <!-- Suitable New Title (No Hubby Affairs!) -->
     <div class="badge-header">💌 OFFICIAL APOLOGY FOR MY MAALKIN 💌</div>
     
     <div class="main-heading">I'm Really Sorry, My Love ❤️</div>
 
-    <!-- Soft Endless Sorry Flow (No Numbers, No Emojis) -->
-    <div class="sorry-flow-box" id="scrollBox">
+    <!-- Clean Romantic Message Box -->
+    <div class="sorry-flow-box">
         <span class="sorry-flow-text" id="sorryStream"></span>
     </div>
 
-    <!-- Heartfelt Note -->
+    <!-- Deeply Romantic & Intimate Note -->
     <div class="letter-content">
-        <p style="margin-top:0;"><b>Respected Maalkin,</b></p>
-        <p>Mujhe nahi pata mere kis gesture ya baat se tum naraz ho, par meri uss ek chhoti si galti ke liye <b>I am deeply, truly sorry.</b></p>
-        <p>Tum sach mein meri poori duniya ho. Agar tumhe lagta hai maine galti ki hai, toh <i>you can punish me however you want</i>—main sab karne ko taiyaar hoon! Bas aise baat band karke saza mat do na...</p>
+        <p style="margin-top:0;"><b>My Dearest Maalkin,</b></p>
+        <p>Mujhe nahi pata meri kis nadani ya baat ne tumhare pyare se dil ko dukhaya hai, par sach me, <b>I am deeply, truly sorry...</b></p>
+        <p>Jab tum naraz hoti ho na, toh aisa lagta hai jaise aas-paas ka saara sukoon chheen gaya ho. Tumhari saanson ki garmaahat, tumhara wo dhere se muskurana, aur mera haath pakad kar tumhara wo bina bole sab keh dena—mai har ek pal bas wahi feel missing kar raha hoon.</p>
+        <p>Tum sirf meri zindagi nahi ho, tum mera saara sukoon ho. Meri aakhri dhadkan aur har ek khwab bas tumse shuru hota hai. Agar maine galti ki hai, toh mujhe jo saza deni hai do, mera har haq tumhara hai... bas iss tarah mujhse apna pyaar aur saaya mat chheeno na...</p>
     </div>
 
     <!-- WhatsApp Forgive Button -->
@@ -164,20 +155,17 @@
 </div>
 
 <script>
-    // Smooth Romantic Sorry Stream
-    const romanticText = "I am so sorry my love ❤️ • Please forgive me • I love you endlessly ❤️ • Extremely Sorry Maalkin • ";
-    const fullStream = romanticText.repeat(12);
+    // Clean, natural romantic sentence (No endless repetition)
+    const romanticText = "I am so sorry my love ❤️ • Extremely Sorry Maalkin • I love you endlessly ❤️ • Forgive me 🥺";
     
     let index = 0;
     const textElem = document.getElementById("sorryStream");
-    const scrollBox = document.getElementById("scrollBox");
 
     function flowText() {
-        if (index < fullStream.length) {
-            textElem.innerHTML += fullStream.charAt(index);
+        if (index < romanticText.length) {
+            textElem.innerHTML += romanticText.charAt(index);
             index++;
-            scrollBox.scrollTop = scrollBox.scrollHeight;
-            setTimeout(flowText, 30);
+            setTimeout(flowText, 40);
         }
     }
     
