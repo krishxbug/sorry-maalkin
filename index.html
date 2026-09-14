@@ -20,7 +20,7 @@
             min-height: 100vh;
         }
         .container {
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             border-radius: 24px;
             padding: 25px 20px;
@@ -41,21 +41,21 @@
         }
         .sub-title {
             color: #7209b7;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             font-weight: 700;
             margin-bottom: 15px;
         }
         
-        /* Cute CSS Character Badge */
+        /* Cute Animated Character Badge */
         .character-badge {
             background: #ffe6eb;
-            width: 90px;
-            height: 90px;
+            width: 85px;
+            height: 85px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 45px;
+            font-size: 42px;
             margin: 0 auto 10px auto;
             border: 3px solid #ff477e;
             box-shadow: 0 6px 15px rgba(255, 71, 126, 0.2);
@@ -67,7 +67,7 @@
             50% { transform: translateY(-8px); }
         }
 
-        /* Clean 100 Sorry Box */
+        /* Clean Numbered 100 Sorry Box */
         .sorry-box-container {
             background: #fff5f8;
             border-radius: 16px;
@@ -159,7 +159,7 @@
 </div>
 
 <script>
-    // Smooth 100 Sorry Typewriter
+    // Smooth Numbered 100 Sorry Typewriter
     const sorryArray = [];
     for(let i = 1; i <= 100; i++) {
         sorryArray.push(`Sorry ${i} ❤️ `);
@@ -174,7 +174,7 @@
             sorryTextElem.innerHTML += sorryArray[index];
             index++;
             scrollBox.scrollTop = scrollBox.scrollHeight;
-            setTimeout(typeNextSorry, 40);
+            setTimeout(typeNextSorry, 35);
         }
     }
     
@@ -185,7 +185,7 @@
         
         // Exact WhatsApp text 100% unchanged!
         var text = encodeURIComponent("Maine apne Dodo ko maaf kiya! ❤️ Meri taraf se tumhari punishment ye hai: ");
-        var phoneNumber = "917068634975"; // Apna 10-digit number yahan daalna!
+        var phoneNumber = "917068634975"; // Yahan apna 10-digit number daalna!
 
         window.location.href = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + text;
     }
