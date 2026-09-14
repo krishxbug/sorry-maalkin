@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For My Maalkin ❤️</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -13,68 +13,91 @@
         }
         body {
             background: linear-gradient(135deg, #ffc3a0 0%, #ffafbd 100%);
-            font-family: 'Quicksand', sans-serif;
-            padding: 25px 15px;
+            font-family: 'Poppins', sans-serif;
+            padding: 20px 12px;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
         }
-        .letter-card {
+
+        /* Floating Hearts Animation Background */
+        .heart-bg {
+            position: fixed;
+            top: -10%;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .card {
             background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            border-radius: 28px;
-            padding: 30px 22px;
-            max-width: 420px;
+            backdrop-filter: blur(10px);
+            border-radius: 26px;
+            padding: 28px 20px;
+            max-width: 410px;
             width: 100%;
             box-shadow: 0 15px 35px rgba(225, 112, 85, 0.25);
             text-align: center;
             border: 2px solid #ffffff;
+            position: relative;
+            z-index: 1;
         }
-        .header-tag {
+
+        .badge-header {
+            display: inline-block;
+            background: #ffeaa7;
             color: #d63031;
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             font-weight: 700;
-            letter-spacing: 1.5px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            margin-bottom: 8px;
-            opacity: 0.8;
+            margin-bottom: 12px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
         }
-        .main-title {
+
+        .main-heading {
             color: #d63031;
-            font-family: 'Dancing Script', cursive;
-            font-size: 2rem;
+            font-family: 'Caveat', cursive;
+            font-size: 2.2rem;
             font-weight: 700;
+            line-height: 1.2;
             margin-bottom: 18px;
         }
-        
-        /* Romantic Heart Stream Box */
-        .sorry-stream-box {
+
+        /* Soft Romantic Sorry Box */
+        .sorry-flow-box {
             background: #fff5f6;
             border-radius: 18px;
-            padding: 15px;
+            padding: 14px;
             height: 110px;
             overflow-y: auto;
-            border: 1.5px solid #ffb8c6;
-            margin-bottom: 22px;
+            border: 1.5px dashed #ff85a1;
+            margin-bottom: 20px;
             text-align: center;
-            box-shadow: inset 0 2px 8px rgba(0,0,0,0.03);
+            box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
         }
 
-        .sorry-stream-text {
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.45rem;
+        .sorry-flow-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.55rem;
             color: #e84393;
-            line-height: 1.6;
-            word-spacing: 2px;
+            line-height: 1.5;
         }
 
-        .note-body {
+        /* Romantic Note */
+        .letter-content {
             color: #2d3436;
-            font-size: 0.94rem;
+            font-size: 0.92rem;
             text-align: left;
             line-height: 1.7;
-            margin-bottom: 24px;
+            margin-bottom: 22px;
             background: #ffffff;
             padding: 18px;
             border-radius: 18px;
@@ -86,7 +109,7 @@
             background: linear-gradient(135deg, #ff7675, #d63031);
             color: white;
             border: none;
-            padding: 16px 24px;
+            padding: 16px 20px;
             font-size: 1.05rem;
             font-weight: 700;
             border-radius: 30px;
@@ -94,7 +117,6 @@
             box-shadow: 0 8px 22px rgba(214, 48, 49, 0.35);
             transition: all 0.3s ease;
             width: 100%;
-            letter-spacing: 0.5px;
         }
 
         .btn-forgive:active {
@@ -105,31 +127,32 @@
             margin-top: 18px;
             font-weight: 700;
             color: #d63031;
-            font-size: 0.9rem;
-            line-height: 1.4;
+            font-size: 0.88rem;
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
-<div class="letter-card">
-    <div class="header-tag">DEPARTMENT OF HUBBY AFFAIRS</div>
+<div class="card">
+    <!-- Suitable New Title (No Hubby Affairs!) -->
+    <div class="badge-header">💌 OFFICIAL APOLOGY FOR MY MAALKIN 💌</div>
     
-    <div class="main-title">For My Everything, My Maalkin ❤️</div>
+    <div class="main-heading">I'm Really Sorry, My Love ❤️</div>
 
-    <!-- Pure Romantic Sorry Flow Box -->
-    <div class="sorry-stream-box" id="scrollContainer">
-        <span class="sorry-stream-text" id="streamText"></span>
+    <!-- Soft Endless Sorry Flow (No Numbers, No Emojis) -->
+    <div class="sorry-flow-box" id="scrollBox">
+        <span class="sorry-flow-text" id="sorryStream"></span>
     </div>
 
     <!-- Heartfelt Note -->
-    <div class="note-body">
+    <div class="letter-content">
         <p style="margin-top:0;"><b>Respected Maalkin,</b></p>
         <p>Mujhe nahi pata mere kis gesture ya baat se tum naraz ho, par meri uss ek chhoti si galti ke liye <b>I am deeply, truly sorry.</b></p>
         <p>Tum sach mein meri poori duniya ho. Agar tumhe lagta hai maine galti ki hai, toh <i>you can punish me however you want</i>—main sab karne ko taiyaar hoon! Bas aise baat band karke saza mat do na...</p>
     </div>
 
-    <!-- Interactive Approval Button -->
+    <!-- WhatsApp Forgive Button -->
     <button class="btn-forgive" onclick="forgiveDodo()">
         💖 Maaf Kiya! (Click Here) 💖
     </button>
@@ -141,19 +164,19 @@
 </div>
 
 <script>
-    // Pure Romantic Repeated Sorry Flow (No numbers, no weird emojis)
-    const romanticSorryText = "I am so sorry my love ❤️ • I'm deeply sorry • Please forgive me • I love you so much ❤️ • Sorry Maalkin • ";
-    const fullText = romanticSorryText.repeat(10);
+    // Smooth Romantic Sorry Stream
+    const romanticText = "I am so sorry my love ❤️ • Please forgive me • I love you endlessly ❤️ • Extremely Sorry Maalkin • ";
+    const fullStream = romanticText.repeat(12);
     
-    let charIndex = 0;
-    const textElem = document.getElementById("streamText");
-    const container = document.getElementById("scrollContainer");
+    let index = 0;
+    const textElem = document.getElementById("sorryStream");
+    const scrollBox = document.getElementById("scrollBox");
 
     function flowText() {
-        if (charIndex < fullText.length) {
-            textElem.innerHTML += fullText.charAt(charIndex);
-            charIndex++;
-            container.scrollTop = container.scrollHeight;
+        if (index < fullStream.length) {
+            textElem.innerHTML += fullStream.charAt(index);
+            index++;
+            scrollBox.scrollTop = scrollBox.scrollHeight;
             setTimeout(flowText, 30);
         }
     }
@@ -165,7 +188,7 @@
         
         // Exact WhatsApp text unchanged!
         var text = encodeURIComponent("Maine apne Dodo ko maaf kiya! ❤️ Meri taraf se tumhari punishment ye hai: ");
-        var phoneNumber = "917068634975"; // Apna 10-digit number yahan daalna!
+        var phoneNumber = "917068634975"; // Yahan apna 10-digit WhatsApp number daalna!
 
         window.location.href = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + text;
     }
