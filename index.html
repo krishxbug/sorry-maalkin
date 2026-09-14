@@ -149,7 +149,7 @@
 </div>
 
 <script>
-    // Exact 100 Sorrys followed by the sweet ending line
+    // Exact 100 Sorries followed by the sweet ending line
     let sorryList = [];
     for(let i = 1; i <= 100; i++) {
         sorryList.push("Sorry ❤️");
@@ -177,8 +177,9 @@
     function forgiveDodo() {
         alert("Yay! Thank you Maalkin! ❤️ Apni punishment aur sweet reply WhatsApp par bhejo!");
         
+        // Exact WhatsApp text preserved
         var text = encodeURIComponent("Maine apne Dodo ko maaf kiya! ❤️ Meri taraf se tumhari punishment ye hai: ");
-        var phoneNumber = "917068634975"; // Apna 10-digit WhatsApp number yahan set karna!
+        var phoneNumber = "917068634975"; // Yahan apna 10-digit WhatsApp number daalna!
 
         window.location.href = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + text;
     }
