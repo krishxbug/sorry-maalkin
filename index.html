@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For My Dearest Maalkin ❤️</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Great+Vibes&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -42,64 +42,50 @@
             opacity: 0.85;
         }
 
-        .main-title {
+        .main-heading {
             color: #d63031;
-            font-family: 'Caveat', cursive;
-            font-size: 2.3rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 16px;
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.7rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            line-height: 1.1;
         }
 
-        .sorry-count-title {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #e84393;
-            margin-bottom: 8px;
-            text-align: left;
-            padding-left: 4px;
-        }
-
-        /* Clean 100 Sorry Badges Grid */
-        .sorry-grid-box {
+        /* Exact Dashed Romantic Box */
+        .sorry-stream-box {
             background: #fff5f6;
             border-radius: 18px;
-            padding: 12px;
-            height: 125px;
+            padding: 16px 14px;
+            height: 120px;
             overflow-y: auto;
             border: 1.5px dashed #ff85a1;
-            margin-bottom: 20px;
-            text-align: left;
+            margin-bottom: 22px;
+            text-align: center;
+            box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
         }
 
-        .sorry-pill {
-            display: inline-block;
-            background: #ffeaa7;
-            color: #d63031;
+        .sorry-stream-text {
             font-family: 'Caveat', cursive;
-            font-size: 1.1rem;
-            font-weight: 700;
-            padding: 3px 10px;
-            border-radius: 12px;
-            margin: 3px 2px;
-            border: 1px solid #fdcb6e;
+            font-size: 1.55rem;
+            color: #e84393;
+            line-height: 1.5;
         }
 
-        /* Real & Natural Letter Content */
-        .letter-content {
+        /* Romantic Princess Treatment Note */
+        .letter-body {
             color: #2d3436;
-            font-size: 0.92rem;
+            font-size: 0.93rem;
             text-align: left;
-            line-height: 1.75;
+            line-height: 1.8;
             margin-bottom: 22px;
             background: #ffffff;
-            padding: 18px;
+            padding: 20px 18px;
             border-radius: 18px;
             border: 1px solid #ffeaa7;
             box-shadow: 0 4px 12px rgba(0,0,0,0.02);
         }
 
-        .letter-content p {
+        .letter-body p {
             margin-bottom: 12px;
         }
 
@@ -133,45 +119,66 @@
 <body>
 
 <div class="card">
-    <div class="header-tag">A Special Note For You</div>
+    <div class="header-tag">A LETTER FROM MY HEART</div>
     
-    <div class="main-title">I'm Really Sorry, My Love ❤️</div>
+    <div class="main-heading">I'm So Sorry, My Love ❤️</div>
 
-    <div class="sorry-count-title">100 Genuine Sorrys From My Heart:</div>
-    
-    <div class="sorry-grid-box" id="sorryBox"></div>
-
-    <div class="letter-content">
-        <p style="margin-top:0;"><b>Listen, Maalkin...</b></p>
-        <p>Mujhe pata hai maine galti ki hai, aur tumhara gussa hona bilkul sahi hai. Meri kisi bhi bewakoofi ki wajah se tumhara mood kharab ho, ye mai bilkul nahi chahta tha.</p>
-        <p>Tumhare bina mera din ekdam adhoora aur khali lagta hai. Mai seriously bohot sorry hoon. Tum mujhe jo punishment dena chaho de do, par plzz bas apna moody silence tod do.</p>
-        <p>I love you endlessly, aur mai promise karta hoon aage se dhyan rakhunga. ❤️</p>
+    <!-- 100 Times Sorry Box ending with "I love you endlessly, Maalkin... 🥺" -->
+    <div class="sorry-stream-box" id="scrollContainer">
+        <span class="sorry-stream-text" id="streamText"></span>
     </div>
 
+    <!-- Sweet Princess Treatment Romantic Note -->
+    <div class="letter-body">
+        <p style="margin-top:0;"><b>My Princess, My Maalkin...</b></p>
+        <p>Aapki chhotisi muskaan meri poori duniya roshan karti hai, aur jab aap naraz hoti hain na, toh sab kuch ekdam pheeka lagne lagta hai.</p>
+        <p>Aap meri rani ho, meri sabse pyari priority ho. Main aapko hamesha khush rakhna chahta hoon. Agar meri kisi bhi chhotisi nadani se aapka mood kharab hua hai, toh mere paas sorry kehne ke alawa aur koi raasta nahi hai.</p>
+        <p>Aap jo bhi saza dengi, mujhe manzoor hai. Bas aap jaldi se muskura do aur apna ye pyaara sa mood thik kar lo na... ❤️</p>
+    </div>
+
+    <!-- WhatsApp Button -->
     <button class="btn-forgive" onclick="forgiveDodo()">
         💖 Maaf Kiya! (Click Here) 💖
     </button>
 
+    <!-- Exact Requested Signature -->
     <div class="sign-off">
-        Always yours,<br>
+        Yours & Only Yours... forever in your custody,<br>
         <b>Your Dodo ❤️</b>
     </div>
 </div>
 
 <script>
-    // Generate 100 Sweet Sorry Pills
-    const sorryBox = document.getElementById("sorryBox");
-    let htmlContent = "";
+    // Exact 100 Sorrys followed by the sweet ending line
+    let sorryList = [];
     for(let i = 1; i <= 100; i++) {
-        htmlContent += `<span class="sorry-pill">Sorry ❤️</span> `;
+        sorryList.push("Sorry ❤️");
     }
-    sorryBox.innerHTML = htmlContent;
+    
+    const streamTextElem = document.getElementById("streamText");
+    const containerElem = document.getElementById("scrollContainer");
+    let count = 0;
+
+    function renderSorries() {
+        if (count < sorryList.length) {
+            streamTextElem.innerHTML += sorryList[count] + " • ";
+            count++;
+            containerElem.scrollTop = containerElem.scrollHeight;
+            setTimeout(renderSorries, 25);
+        } else {
+            // Ending phrase after 100 sorries
+            streamTextElem.innerHTML += "<br><br><b>I love you endlessly, Maalkin... 🥺</b>";
+            containerElem.scrollTop = containerElem.scrollHeight;
+        }
+    }
+    
+    setTimeout(renderSorries, 300);
 
     function forgiveDodo() {
         alert("Yay! Thank you Maalkin! ❤️ Apni punishment aur sweet reply WhatsApp par bhejo!");
         
         var text = encodeURIComponent("Maine apne Dodo ko maaf kiya! ❤️ Meri taraf se tumhari punishment ye hai: ");
-        var phoneNumber = "917068634975"; // Yahan apna 10-digit WhatsApp number daalna!
+        var phoneNumber = "917068634975"; // Apna 10-digit WhatsApp number yahan set karna!
 
         window.location.href = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + text;
     }
